@@ -1,0 +1,79 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/items.js"></script>
+    <script src="src/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1> Albion Prices Dashboard </h1>
+    </header>
+    <div id="search-bar">
+        <input id = "itemValue" type="text" placeholder="Digite um item">
+        <button id = "search" onclick="getItem()"> Buscar</button> 
+    </div>
+
+    <div id = "App">
+        <div id="price-containers">
+            <div name = "Caerleon"id="price-container">
+                <div id="info">
+                    <div style="background-color: rgb(204, 11, 11); height: 2px;"></div>
+                    <h2>Caerleon</h2>
+                    <h3 id = "CaerleonPrice"> Waiting for search</h3>
+                </div>
+            </div>
+    
+            <div name = "Lymhurst" id="price-container">
+                <div id="info">
+                    <div style="background-color: rgb(6, 95, 6); height: 2px;"></div>
+                    <h2>Lymhurst</h2>
+                    <h3 id = "LymhurstPrice"> Waiting for search</h3>
+                </div>
+            </div>
+    
+            <div name = "Bridgewatch" id="price-container">
+                <div id="info">
+                    <div style="background-color: rgb(245, 150, 7); height: 2px;"></div>
+                    <h2>Bridgewatch</h2>
+                    <h3 id = "BridgewatchPrice"> Waiting for search</h3>
+                </div>
+            </div>
+    
+            <div name = "Martlock" id="price-container">
+                <div id="info">
+                    <div style="background-color: rgb(60, 60, 218); height: 2px;"></div>
+                    <h2>Martlock</h2>
+                    <h3 id = "MartlockPrice" > Waiting for search</h3>
+                </div>
+            </div>
+    
+            <div name = "Thetford" id="price-container">
+                <div id="info">
+                    <div style="background-color: rgb(82, 5, 82); height: 2px;"></div>
+                    <h2>Thetford</h2>
+                    <h3 id = "ThetfordPrice"> Waiting for search</h3>
+                </div>
+            </div>
+    
+            <div name = "Fort Sterling" id="price-container">
+                <div id="info">
+                    <div style="background-color: lightskyblue; height: 2px;"></div>
+                    <h2>Fort Sterling</h2>
+                    <h3 id = "Fort SterlingPrice"> Waiting for search</h3>
+                </div>
+            </div>
+            <div id="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="src/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+* {
+    background-color: rgb(25, 30, 36);
+    color: white;
+    font-family: 'Oswald',sans-serif;
+}
+#search-bar{
+    text-align: center;
+    margin-bottom: 10px;
+    width: auto;
+}
+#date_info{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+#chart-container{
+    box-shadow: 0 4px 8px 0 rgba(136, 134, 134, 0.2);
+    width: 96.8%;
+    text-align: center;
+    margin: 10px;
+    transition: 0.3s;
+}
+#chart-container:hover{
+    box-shadow: 0 8px 16px 0  rgba(136, 134, 134, 0.2);
+}
+
+
+@media screen and (max-width:750px) {
+    header {
+        text-align: center;
+        width: 100%;
+    }
+    #search-bar input{
+        width: 70%;
+    }
+    #price-containers{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #price-container{
+        background-color: rgb(25, 30, 36);
+        margin: 10px;
+        font-size: 15px;
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(136, 134, 134, 0.2);
+        transition: 0.3s;
+    }
+    #price-container:hover{
+        box-shadow: 0 8px 16px 0  rgba(136, 134, 134, 0.2);
+    }
+    #info h2{
+        text-align: center;
+    }
+    #info h3{
+        text-align: center; 
+    }
+    #chart-container{
+        width: 93%;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    header {
+        text-align: center;
+        padding: 5px;
+    }
+    #search-bar input{
+        width: 30%;
+    }
+    #price-containers{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #price-container{
+        background-color: rgb(25, 30, 36);
+        margin: 10px;
+        font-size: 20px;
+        min-width: 30%;
+        box-shadow: 0 4px 8px 0  rgba(255, 255, 255, 0.2);
+        transition: 0.3s;
+    }
+    #price-container:hover{
+        box-shadow: 0 8px 16px 0  rgba(255, 255, 255, 0.2)
+    }
+    #info h2{
+        text-align: center;
+    }
+    #info h3{
+        text-align: center; 
+    }
+  }
+
+  @media screen and (max-width: 495px) {
+    #price-container{
+        background-color: rgb(25, 30, 36);
+        margin: 10px;
+        font-size: 15px;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(136, 134, 134, 0.2);
+        transition: 0.3s;
+    }
+    #chart-container{
+        width: 100%;
+    }
+  }
