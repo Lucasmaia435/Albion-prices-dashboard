@@ -5,12 +5,13 @@ let chart;
 
 const goldValues = () => {
     const api = "https://www.albion-online-data.com/api/v2/stats/gold?count=20"
-    axios.get(api)
-    .then((response) => {
-        console.log(response.data);
-        for(let i = 0; i < response.data.length; i ++ ){
-            data_chart.push(response.data[i].price);
-            labels.push(response.data[i].timestamp);
+    fetch(api)
+    .then(async (response) => {
+        const data = await response.json();
+
+        for(let i = 0; i < data.length; i ++ ){
+            data_chart.push(data[i].price);
+            labels.push(data[i].timestamp);
         }
         data_chart = data_chart.reverse();
         labels = labels.reverse();

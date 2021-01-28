@@ -29,11 +29,12 @@ function LoadPrices(itemTag){
     const locations = "Caerleon,Lymhurst,Bridgewatch,Martlock,Thetford,FortSterling";
     const item = itemTag;
 
-    api = `https://www.albion-online-data.com/api/v2/stats/history/${item}?date=2-1-2020&locations=${locations}&qualities=1&time-scale=1`;
+    api = `https://www.albion-online-data.com/api/v2/stats/history/${item}?date=1-27-2021&locations=${locations}&qualities=1&time-scale=1`;
     
-    axios.get(api)
-    .then((response) => {
-        dados(response.data);
+    fetch(api)
+    .then(async (response)  => {
+        const data = await response.json();
+        return dados(data);
     })
     .catch((error) => {
         console.log(error);
@@ -42,6 +43,7 @@ function LoadPrices(itemTag){
 
 const dados = (data) =>{
     data.forEach((el) => {
+        console.log(el);
         const preço = el.data[el.data.length-1].avg_price;
         let price_container = document.getElementById(`${el.location}Price`);
         price_container.textContent = preço;
